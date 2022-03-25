@@ -15,8 +15,7 @@ buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); }
 function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
-  let argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
-
+  let argMoveId, argPlayerMove; 
 /**
  * Describe this function...
  */
@@ -33,6 +32,7 @@ function getMoveName(argMoveId) {
     return 'kamień';
   }
 }
+let argComputerMove;
 
 /**
  * Describe this function...
@@ -53,7 +53,7 @@ function displayResult(argPlayerMove, argComputerMove) {
   printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 }
 
-
+let playerMove, computerMove, randomNumber, playerInput;
 'papier';
 playerMove = argButtonName;
 console.log('wybór ruchu gracza to: ' + playerInput);
