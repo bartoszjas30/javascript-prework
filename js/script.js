@@ -1,4 +1,13 @@
-var argButtonName, buttonPaper, buttonRock, buttonScissors, buttonTest;
+
+
+var argButtonName, buttonPaper, buttonRock, buttonScissors, buttonSissors, buttonTest;
+buttonScissors = document.getElementById('button-scissors');
+buttonRock = document.getElementById('button-rock');
+buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
+buttonPaper = document.getElementById('button-paper');
+buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
+buttonScissors = document.getElementById('button-scissors');
+buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
 
 /**
  * Describe this function...
@@ -6,8 +15,7 @@ var argButtonName, buttonPaper, buttonRock, buttonScissors, buttonTest;
 function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
-
-  var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
+  var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
 
 /**
  * Describe this function...
@@ -44,24 +52,16 @@ function displayResult(argPlayerMove, argComputerMove) {
   }
   printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 }
+
+
+'papier';
 playerMove = argButtonName;
 console.log('wybór ruchu gracza to: ' + playerInput);
-playerMove = argButtonName;
 console.log('ruch gracza to: ' + playerMove);
 randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
 computerMove = getMoveName(randomNumber);
 console.log('ruch komputera to: ' + computerMove);
 displayResult(playerMove, computerMove);
-Step JavaScript
-Run JavaScript
-Reset edit
 }
-buttonTest = document.getElementById('button-test');
-buttonTest.addEventListener('click', function(){ buttonClicked('Guzik TEST'); });
-buttonRock = document.getElementById('button-rock');
-buttonRock.addEventListener('click', function(){ buttonClicked('Guzik KAMIEŃ'); });
-buttonScissors = document.getElementById('button-scissors');
-buttonScissors.addEventListener('click', function(){ buttonClicked('Guzik NOŻYCE'); });
-buttonPaper = document.getElementById('button-paper');
-buttonPaper.addEventListener('click', function(){ buttonClicked('Guzik PAPIER'); });
+
